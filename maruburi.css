@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'maruburi-bold';
+  font-weight: 800;
+  font-display: swap;
+  src: local('MARUBuriot-Bold00'), url(./MARUBuriot-Bold00.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'maruburi-extralight';
+  font-weight: 200;
+  font-display: swap;
+  src: local('MARUBuriot-ExtraLight00'), url(./MARUBuriot-ExtraLight00.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'maruburi-light';
+  font-weight: 300;
+  font-display: swap;
+  src: local('MARUBuriot-Light00'), url(./MARUBuriot-Light00.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'maruburi-regular';
+  font-weight: 400;
+  font-display: swap;
+  src: local('MARUBuriot-Regular00'), url(./MARUBuriot-Regular00.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'maruburi-semibold';
+  font-weight: 600;
+  font-display: swap;
+  src: local('MARUBuriot-SemiBold00'), url(./MARUBuriot-SemiBold00.woff2) format('woff2');
+}
+
+.maruburi-extralight {
+  font-family: 'maruburi-extralight', sans-serif;
+  font-weight: 200;
+}
+
+.maruburi-light {
+  font-family: 'maruburi-light', sans-serif;
+  font-weight: 300;
+}
+
+.maruburi-regular {
+  font-family: 'maruburi-regular', sans-serif;
+  font-weight: 400;
+}
+
+.maruburi-semibold {
+  font-family: 'maruburi-semibold', sans-serif;
+  font-weight: 600;
+}
+
+.maruburi-bold {
+  font-family: 'maruburi-bold', sans-serif;
+  font-weight: 800;
+}

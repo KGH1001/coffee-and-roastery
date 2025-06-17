@@ -1,0 +1,39 @@
+:root {
+  --brown: #2F2723;
+  --caramel: #D0A376;
+  --caramel-30: #D0A3764D;
+  --ivory: #F1E5D7;
+  --cyan: #394F4F;
+}
+
+.bg-brown {
+  background-color: var(--brown) !important;
+}
+
+.bg-caramel {
+  background-color: var(--caramel) !important;
+}
+
+.bg-ivory {
+  background-color: var(--ivory) !important;
+}
+
+.bg-cyan {
+  background-color: var(--cyan) !important;
+}
+
+.text-brown {
+  color: var(--brown) !important;
+}
+
+.text-caramel {
+  color: var(--caramel) !important;
+}
+
+.text-ivory {
+  color: var(--ivory) !important;
+}
+
+.text-cyan {
+  color: var(--cyan) !important;
+}

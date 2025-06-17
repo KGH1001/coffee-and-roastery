@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beans - Coffee and Roastery</title>
+    <link rel="stylesheet" href="./fonts/pretendard.css" />
+    <link rel="stylesheet" href="./fonts/maruburi.css" />
+    <link rel="stylesheet" href="./colors.css" />
+    <style>
+      :root {
+        --brown: #2F2723;
+        --ivory: #F1E5D7;
+        --caramel: #D0A376;
+        --caramel-30: #D0A3764D;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body, html {
+        margin: 0;
+        padding: 0;
+        background-color: var(--brown);
+        color: var(--ivory);
+        font-family: 'pretendard', sans-serif;
+        overflow-x: hidden;
+      }
+
+      .fixed-caramel-line {
+        position: fixed;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background-color: var(--caramel-30);
+        z-index: 9999;
+        pointer-events: none;
+      }
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--ivory);
+        z-index: 1000;
+      }
+
+      .navbar:hover .submenu-container {
+        max-height: 500px;
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      .navbar-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        padding: 10px 0 0 0;
+        position: relative;
+        z-index: 2;
+      }
+
+      .navbar-content a {
+        color: var(--brown);
+        font-weight: bold;
+        font-size: 1.2rem;
+        font-family: 'maruburi-bold', sans-serif;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      .logo {
+        width: 40px;
+        height: auto;
+      }
+
+      .submenu-container {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        padding: 10px 0;
+        background-color: var(--ivory);
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.4s ease;
+        position: relative;
+        z-index: 1;
+      }
+
+      .submenu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .submenu a {
+        color: var(--brown);
+        font-size: 0.9rem;
+        text-decoration: none;
+        margin: 4px 0;
+        font-family: 'maruburi-semibold', sans-serif;
+        white-space: nowrap;
+        transition: color 0.2s ease;
+      }
+
+      .submenu a:hover {
+        text-decoration: underline;
+        color: var(--caramel);
+      }
+
+      .beans-header {
+        text-align: center;
+        margin-top: 140px;
+        font-size: 3.5rem;
+        font-family: 'maruburi-bold', sans-serif;
+      }
+
+      .category-bar {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin: 20px 0 40px;
+        font-family: 'maruburi-semibold', sans-serif;
+        font-size: 1rem;
+      }
+
+      .category-bar span {
+        color: var(--caramel);
+        cursor: pointer;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-top: 3rem;
+        font-size: 1.3rem;
+        color: var(--caramel);
+        font-family: 'maruburi-bold', sans-serif;
+      }
+
+      .bean-section {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .bean-title {
+        font-size: 1.1rem;
+        font-weight: bold;
+        font-family: 'maruburi-bold', sans-serif;
+      }
+
+      .bean-subtitle {
+        font-size: 0.9rem;
+        font-style: italic;
+        color: var(--caramel);
+        margin-bottom: 5px;
+      }
+
+      .tag-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+        margin-bottom: 2rem;
+      }
+
+      .tag {
+        background-color: var(--ivory);
+        color: var(--brown);
+        padding: 2px 8px;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        font-weight: bold;
+      }
+
+      .side-bean {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 상단 caramel 라인 -->
+    <div class="fixed-caramel-line"></div>
+
+    <!-- 상단바 -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="index.html">About</a>
+            <a href="term1s.html">Terms</a>
+            <div class="logo-wrapper">
+            <a href="index.html"><img src="./images/logo.png" alt="로고" class="logo" /></a>
+            </div>
+            <a href="beans.html">Beans</a>
+            <a href="#">Cafes</a>
+        </div>
+        <div class="submenu-container">
+            <div class="submenu">
+            <a href="#">커피?</a>
+            </div>
+            <div class="submenu">
+            <a href="term1s.html">전체</a>
+            <a href="#">커피 이름</a>
+            <a href="#">Aroma(향기)</a>
+            <a href="#">Taste(맛)</a>
+            <a href="#">Body(무게)</a>
+            <a href="#">기타</a>
+            </div>
+            <div class="submenu"><p>&nbsp;</p></div>
+            <div class="submenu">
+            <a href="beans.html">원두 종류 전체</a>
+            <a href="#">에티오피아</a>
+            <a href="#">과테말라</a>
+            <a href="#">케냐</a>
+            <a href="#">콜롬비아</a>
+            </div>
+            <div class="submenu">
+            <a href="#">전국 로스터리 카페</a>
+            <a href="#">서울·인천·경기</a>
+            <a href="#">강원</a>
+            <a href="#">충청·대전</a>
+            <a href="#">전라·광주·제주</a>
+            <a href="#">경상·대구·울산·부산</a>
+            </div>
+        </div>
+
+        <div class="navbar-underline"></div>
+    </nav>
+    <!-- 원두 이미지 -->
+    <img src="./images/beans-30.png" alt="원두 이미지" class="side-bean" />
+    <!-- 본문-->
+    <h1 class="beans-header">Beans</h1>
+    <div class="category-bar">
+        <span>원두 종류 전체</span>
+        <span>에티오피아</span>
+        <span>과테말라</span>
+        <span>케냐</span>
+        <span>콜롬비아</span>
+    </div>
+ 
+
+    <!-- 에티오피아 섹션 -->
+    <div class="bean-section">
+      <h2 class="section-title">에티오피아</h2>
+
+      <div class="bean-title">예가체프</div>
+      <div class="bean-subtitle">Ethiopia Yirgachefe</div>
+      <div class="tag-list">
+        <span class="tag">산미</span>
+        <span class="tag">과일향</span>
+        <span class="tag">시트러스</span>
+        <span class="tag">꽃향</span>
+      </div>
+
+      <div class="bean-title">시다모</div>
+      <div class="bean-subtitle">Ethiopia Sidamo</div>
+      <div class="tag-list">
+        <span class="tag">꽃향</span>
+        <span class="tag">바디감</span>
+        <span class="tag">달콤</span>
+        <span class="tag">산미</span>
+      </div>
+
+      <div class="bean-title">하라</div>
+      <div class="bean-subtitle">Ethiopia Harra</div>
+      <div class="tag-list">
+        <span class="tag">베리</span>
+        <span class="tag">초콜릿</span>
+        <span class="tag">묵직</span>
+        <span class="tag">자스민</span>
+      </div>
+    </div>
+
+    <!-- 과테말라 섹션 -->
+    <div class="bean-section">
+      <h2 class="section-title">과테말라</h2>
+
+      <div class="bean-title">안티구아</div>
+      <div class="bean-subtitle">Guatemala Antigua</div>
+      <div class="tag-list">
+        <span class="tag">고소</span>
+        <span class="tag">아몬드</span>
+        <span class="tag">바디감</span>
+        <span class="tag">달콤</span>
+      </div>
+
+      <div class="bean-title">산 마르코스</div>
+      <div class="bean-subtitle">Guatemala San Marcos</div>
+      <div class="tag-list">
+        <span class="tag">고소</span>
+        <span class="tag">풍부한</span>
+        <span class="tag">바디감</span>
+        <span class="tag">달콤</span>
+      </div>
+    </div>
+  </body>
+</html>
